@@ -6,7 +6,6 @@ class MovieCard extends React.Component {
   render() {
     const { movie } = this.props;
     const { title, storyline, imagePath, id } = movie;
-    console.log(movie);
     return (
       <div className="row">
         <div className="col s12 m7">

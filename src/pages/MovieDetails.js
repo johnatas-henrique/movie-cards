@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import * as movieAPI from '../services/movieAPI';
 import { Loading } from '../components';
 
@@ -13,7 +14,9 @@ class MovieDetails extends Component {
   }
 
   componentDidMount() {
-    movieAPI.getMovie(movieId).then((respPromise) =>
+    const { match } = this.props;
+
+    movieAPI.getMovie(match.params.id).then((respPromise) =>
       this.setState({
         movie: respPromise,
         showLoading: false,
@@ -23,9 +26,11 @@ class MovieDetails extends Component {
 
   render() {
     // Change the condition to check the state
-    if (this.state.showLoading) return <Loading />;
+    const { showLoading, movie } = this.state;
 
-    const { title, storyline, imagePath, genre, rating, subtitle } = movie;
+    if (showLoading) return <Loading />;
+
+    const { title, storyline, imagePath, genre, rating, subtitle, id } = movie;
 
     return (
       <div className="row">
@@ -42,6 +47,8 @@ class MovieDetails extends Component {
               <p>{`Rating: ${rating}`}</p>
             </div>
             <div className="card-action">
+              <Link to={`/movies/${id}/edit`}>EDITAR</Link>
+              <Link to="/">VOLTAR</Link>
             </div>
           </div>
         </div>
@@ -49,5 +56,13 @@ class MovieDetails extends Component {
     );
   }
 }
+
+MovieDetails.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string,
+    }),
+  }).isRequired,
+};
 
 export default MovieDetails;
