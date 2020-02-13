@@ -22,6 +22,13 @@ class MovieDetails extends Component {
         showLoading: false,
       }),
     );
+    this.delete = this.delete.bind(this);
+  }
+
+  delete() {
+    const { movie } = this.state;
+
+    movieAPI.deleteMovie(movie.id);
   }
 
   render() {
@@ -48,6 +55,7 @@ class MovieDetails extends Component {
             </div>
             <div className="card-action">
               <Link to={`/movies/${id}/edit`}>EDITAR</Link>
+              <Link to="/" onClick={this.delete}>APAGAR</Link>
               <Link to="/">VOLTAR</Link>
             </div>
           </div>
