@@ -22,7 +22,7 @@ class MovieDetails extends Component {
         movie: respPromise,
         showLoading: false,
       }),
-    );  
+    );
   }
 
   delete() {
