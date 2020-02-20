@@ -11,6 +11,7 @@ class MovieDetails extends Component {
       movie: '',
       showLoading: true,
     };
+    this.delete = this.delete.bind(this);
   }
 
   componentDidMount() {
@@ -21,8 +22,7 @@ class MovieDetails extends Component {
         movie: respPromise,
         showLoading: false,
       }),
-    );
-    this.delete = this.delete.bind(this);
+    );  
   }
 
   delete() {
