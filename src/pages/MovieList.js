@@ -34,7 +34,7 @@ class MovieList extends Component {
           {movies.map((movie) => <MovieCard key={movie.title} movie={movie} />)}
         </div>
         <div className="center-align">
-          <Link className="waves-effect waves-light btn" to="/movies/new">ADICIONAR CARTÃO</Link>
+          <Link className="waves-effect waves-light btn" to="/movie-cards/new">ADICIONAR CARTÃO</Link>
         </div>
       </div>
     );
