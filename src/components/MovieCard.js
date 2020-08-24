@@ -11,7 +11,7 @@ class MovieCard extends React.Component {
         <div className="col s12 m7">
           <div className="card movie-card">
             <div className="card-image">
-              <img alt="Movie Cover" className="movie-card-image" src={`./movie-cards/${imagePath}`} />
+              <img alt="Movie Cover" className="movie-card-image" src={`${imagePath}`} />
               <span className="card-title">{title}</span>
             </div>
             <div className="card-content">
