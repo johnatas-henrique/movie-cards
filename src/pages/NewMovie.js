@@ -33,7 +33,7 @@ class NewMovie extends Component {
   render() {
     const { shouldRedirect, movieBlank } = this.state;
 
-    if (shouldRedirect) return <Redirect to="/" />;
+    if (shouldRedirect) return <Redirect to="/movie-cards/" />;
 
     return (
       <MovieForm movie={movieBlank} onSubmit={this.handleSubmit} />
