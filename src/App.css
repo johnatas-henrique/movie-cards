@@ -1,5 +1,7 @@
 body {
   background-color: whitesmoke;
+  background-image: url('./background.jpg');
+  background-size: cover;
   box-sizing: border-box;
 }
 
@@ -25,8 +27,11 @@ body {
 
 .loading {
   align-items: center;
+  background-color: white;
+  color: black;
   display: flex;
-  font-size: 35px;
+  font-size: 48px;
+  font-weight: 700;
   height: 100%;
   justify-content: center;
   position: fixed;
