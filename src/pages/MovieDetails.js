@@ -44,7 +44,7 @@ class MovieDetails extends Component {
         <div className="col s12 m7">
           <div className="card">
             <div className="card-image">
-              <img alt="Movie Cover" src={`../${imagePath}`} />
+              <img alt="Movie Cover" src={`../movie-cards/${imagePath}`} />
               <span className="card-title">{title}</span>
             </div>
             <div className="card-content">
@@ -55,8 +55,8 @@ class MovieDetails extends Component {
             </div>
             <div className="card-action">
               <Link to={`/movie-cards/${id}/edit`}>EDITAR</Link>
-              <Link to="/" onClick={this.delete}>APAGAR</Link>
-              <Link to="/">VOLTAR</Link>
+              <Link to="/movie-cards" onClick={this.delete}>APAGAR</Link>
+              <Link to="/movie-cards">VOLTAR</Link>
             </div>
           </div>
         </div>
