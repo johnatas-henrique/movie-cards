@@ -43,3 +43,12 @@ body {
 .card .card-content p {
   margin-bottom: 15px;
 }
+
+.card-action {
+  background: whitesmoke !important;
+}
+
+.card-action a {
+  color: black !important;
+  font-weight: 700;
+}
