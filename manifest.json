@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Movie Cards Library CRUD",
+  "name": "Projeto Movie Cards Library CRUD",
   "icons": [
     {
       "src": "favicon.ico",
