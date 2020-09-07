@@ -8,6 +8,31 @@ Esse projeto me deu um pouco de nostalgia, lembrei de quando trabalhava com rede
 
 ---
 
+## Instalação do projeto localmente
+
+Após cada um dos passos, haverá um exemplo do comando a ser digitado para fazer o que está sendo pedido, caso tenha dificuldades e o exemplo não seja suficiente, não hesite em me contatar em _johnatas.henrique@gmail.com_.
+
+1. Abra o terminal e crie um diretório no local de sua preferência com o comando **mkdir**:
+```javascript
+  mkdir projetos-johnatas
+```
+
+2. Entre no diretório que acabou de criar e depois clone o projeto:
+```javascript
+  cd projetos-johnatas
+  git clone git@github.com:johnatas-henrique/movie-cards.git
+```
+
+3. Acesse o diretório do projeto e depois utilize o comando **npm i** para instalar todas as dependências necessárias:
+```javascript
+  cd movie-cards
+  npm i
+```
+
+4. Por último, rode o comando **npm start** e acesse o projeto via browser, no caminho `http://localhost:3000/movie-cards`.
+
+---
+
 ## Requisitos do projeto
 
 ### 1 - O componente `App` deve renderizar `BrowserRouter`
